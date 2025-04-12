@@ -51,7 +51,7 @@ Weather-Today/
 
 1. **Clone or download the repository**:
    ```bash
-   git clone https://github.com/your-username/weather-today.git
+   git clone https://github.com/Bryt19/weather-today.git
    cd weather-today
    ```
 
