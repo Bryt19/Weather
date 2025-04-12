@@ -64,7 +64,7 @@ Weather-Today/
 ## 🔐 API Integration
 
 This project uses **WeatherAPI**.  
-To use your own API key: fbabfe03d58e438eb72184244250904
+To use your own API key: 
 
 1. Sign up at [WeatherAPI](https://www.weatherapi.com/).
 2. Replace the placeholder API key in `script.js`:
