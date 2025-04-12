@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Weather Today</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <nav class="navbar">
+    <h1>Weather Today</h1>
+    <div id="mode-toggle" class="mode-toggle">
+      <span id="moon" class="emoji">🌙</span>
+      <span id="sun" class="emoji" style="display: none;">🌞</span>
+    </div>
+  </nav>
+
+  <div class="search-bar" id="search-bar">
+    <input type="text" id="city-input" placeholder="Enter city name or country" />
+    <button id="search-btn">Search</button>
+  </div>
+
+  <div id="weather-container" class="weather-container"></div>
+
+  <footer>
+    <p>Powered by WeatherAPI | Made with ❤️</p>
+  </footer>
+
+  <div id="weather-modal" class="modal">
+    <div class="modal-content">
+      <h3 id="modal-day"></h3>
+      <p id="modal-temp"></p>
+      <p id="modal-humidity"></p>
+      <p id="modal-wind"></p>
+      <button class="close-btn" id="close-modal-btn">Close</button>
+    </div>
+  </div>
+
+  <div id="mode-message"></div>
+  <script src="script.js"></script>
+</body>
+</html>
