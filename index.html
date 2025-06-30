@@ -1,42 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Weather Today</title>
-  <link rel="stylesheet" href="styles.css" />
-</head>
-<body>
-  <nav class="navbar">
-    <h1>Weather Today</h1>
-    <div id="mode-toggle" class="mode-toggle">
-      <span id="moon" class="emoji">🌙</span>
-      <span id="sun" class="emoji" style="display: none;">🌞</span>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather Today</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <div class="header-content">
+        <div class="logo">
+          <i class="fas fa-cloud-sun"></i>
+          <h1>WeatherFlow</h1>
+        </div>
+        <div class="theme-toggle" id="mode-toggle">
+          <i class="fas fa-moon" id="moon"></i>
+          <i class="fas fa-sun" id="sun" style="display: none"></i>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <!-- Search Section -->
+      <section class="search-section">
+        <div class="search-container">
+          <div class="search-box">
+            <i class="fas fa-search search-icon"></i>
+            <input
+              type="text"
+              id="city-input"
+              placeholder="Search for a city..."
+            />
+            <button id="search-btn" class="search-button">
+              <i class="fas fa-arrow-right"></i>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Weather Display -->
+      <section class="weather-section">
+        <div id="weather-container" class="weather-container">
+          <!-- Weather content will be dynamically inserted here -->
+        </div>
+      </section>
+
+      <!-- Loading State -->
+      <div id="loading" class="loading-container" style="display: none">
+        <div class="loading-spinner"></div>
+        <p>Fetching weather data...</p>
+      </div>
+    </main>
+
+    <!-- Weather Modal -->
+    <div id="weather-modal" class="modal">
+      <div class="modal-overlay"></div>
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3 id="modal-day"></h3>
+          <button class="modal-close" id="close-modal-btn">
+            <i class="fas fa-times"></i>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="modal-weather-info">
+            <div class="modal-temp-section">
+              <p id="modal-temp"></p>
+            </div>
+            <div class="modal-details">
+              <div class="detail-item">
+                <i class="fas fa-tint"></i>
+                <p id="modal-humidity"></p>
+              </div>
+              <div class="detail-item">
+                <i class="fas fa-wind"></i>
+                <p id="modal-wind"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-  </nav>
 
-  <div class="search-bar" id="search-bar">
-    <input type="text" id="city-input" placeholder="Enter city name or country" />
-    <button id="search-btn">Search</button>
-  </div>
+    <!-- Theme Message -->
+    <div id="mode-message" class="theme-message"></div>
 
-  <div id="weather-container" class="weather-container"></div>
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-content">
+        <p>Powered by WeatherAPI</p>
+        <p>Made with <i class="fas fa-heart"></i> for weather lovers</p>
+      </div>
+    </footer>
 
-  <footer>
-    <p>Powered by WeatherAPI | Made with ❤️</p>
-  </footer>
-
-  <div id="weather-modal" class="modal">
-    <div class="modal-content">
-      <h3 id="modal-day"></h3>
-      <p id="modal-temp"></p>
-      <p id="modal-humidity"></p>
-      <p id="modal-wind"></p>
-      <button class="close-btn" id="close-modal-btn">Close</button>
-    </div>
-  </div>
-
-  <div id="mode-message"></div>
-  <script src="script.js"></script>
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>
